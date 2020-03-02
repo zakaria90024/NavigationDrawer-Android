@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent">
 
+    <Button
+        android:id="@+id/javaBtnId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:text="java"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cppId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Cpp"
+        app:layout_constraintBottom_toBottomOf="@+id/javaBtnId"
+        app:layout_constraintEnd_toStartOf="@+id/cId"
+        app:layout_constraintStart_toEndOf="@+id/javaBtnId"
+        app:layout_constraintTop_toTopOf="@+id/javaBtnId"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/cId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="C"
+        app:layout_constraintBottom_toBottomOf="@+id/cppId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cppId" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
